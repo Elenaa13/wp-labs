@@ -1,5 +1,6 @@
 package mk.ukim.finki.wp.lab.repository;
 
+import mk.ukim.finki.wp.lab.model.Category;
 import mk.ukim.finki.wp.lab.model.Event;
 import org.springframework.stereotype.Repository;
 
@@ -11,6 +12,9 @@ import java.util.stream.Collectors;
 
 public class EventRepository {
     private List<Event> events = new ArrayList<>();
+
+
+    private List<Category> categories = new ArrayList<>();
 
     public EventRepository(){
         events.add(new Event("Oppenheimer", "A film about the father of the atomic bomb", 9.5));

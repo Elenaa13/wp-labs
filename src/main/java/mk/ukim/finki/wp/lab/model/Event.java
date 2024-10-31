@@ -6,11 +6,13 @@ public class Event {
     String name;
     String description;
     double popularityScore;
+    Category category;
 
-    public Event(String name, String description, double popularityScore){
+    public Event(String name, String description, double popularityScore, Category category){
         this.name=name;
         this.description=description;
         this.popularityScore=popularityScore;
+        this.category=category;
     }
 
     public String getName() {
