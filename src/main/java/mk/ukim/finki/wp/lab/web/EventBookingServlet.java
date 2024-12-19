@@ -38,7 +38,7 @@ public class EventBookingServlet extends HttpServlet {
 
         String clientIp = req.getRemoteAddr();
         Long numTickets = Long.parseLong(req.getParameter("numTickets"));
-        EventBooking booking = new EventBooking(eventName, attendeeName, attendeeAddress, numTickets);
+        EventBooking booking = new EventBooking();
 
         WebContext context = new WebContext(webExchange);
 

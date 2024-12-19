@@ -5,7 +5,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import mk.ukim.finki.wp.lab.model.Event;
-import mk.ukim.finki.wp.lab.repository.EventRepository;
+//import mk.ukim.finki.wp.lab.repository.EventRepository;
 import mk.ukim.finki.wp.lab.service.EventService;
 import org.thymeleaf.context.WebContext;
 import org.thymeleaf.spring6.SpringTemplateEngine;

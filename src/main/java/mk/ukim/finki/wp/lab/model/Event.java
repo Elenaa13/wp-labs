@@ -1,29 +1,33 @@
 package mk.ukim.finki.wp.lab.model;
-import lombok.Data;
-@Data
 
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+
+@Table(name = "events")
 public class Event {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     String name;
     String description;
     double popularityScore;
-    Category category;
 
-    public Event(String name, String description, double popularityScore, Category category){
+
+    @ManyToOne
+    private Location location;
+    public Event(String name, String description, double popularityScore, Location location){
         this.name=name;
         this.description=description;
         this.popularityScore=popularityScore;
-        this.category=category;
-    }
+        this.id=(long) (Math.random()*1000);
+        this.location=location;
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public double getPopularityScore() {
-        return popularityScore;
     }
 }
